@@ -29,16 +29,11 @@ const Login = () => {
         if (error) throw error;
         toast({ title: "Check your email", description: "A confirmation link has been sent." });
       } else {
-        const { data, error } = await supabase.auth.signInWithPassword({
+        const { error } = await supabase.auth.signInWithPassword({
           email: email.trim(),
           password,
         });
         if (error) throw error;
-        if (data.user && !data.user.email_confirmed_at) {
-          await supabase.auth.signOut();
-          toast({ title: "Email not verified", description: "Please check your email and verify your account before signing in.", variant: "destructive" });
-          return;
-        }
         navigate("/");
       }
     } catch (error: any) {
