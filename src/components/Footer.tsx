@@ -10,7 +10,7 @@ const Footer = () => (
       <p className="text-muted-foreground text-sm max-w-md mx-auto">
         A curated collection of the most impactful AI tools in 2025. Updated regularly to keep you ahead of the curve.
       </p>
-      <p className="text-muted-foreground/50 text-xs mt-6">© 2025 All rights reserved.</p>
+      <p className="text-muted-foreground/50 text-xs mt-6">© 2025 kavisriselvarasu. All rights reserved.</p>
     </div>
   </footer>
 );
